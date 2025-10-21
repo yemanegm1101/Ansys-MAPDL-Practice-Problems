@@ -1,0 +1,25 @@
+It looks like you've provided a series of ANSYS input files, each containing commands for different structural and thermal analyses. Here’s a brief overview of what each file appears to be doing based on the provided content:
+
+1. **Steel Bracket.inp**: This file defines a 3D solid model of a steel bracket, applies material properties, creates geometry using blocks and cylinders, and sets up a static analysis with boundary conditions and loads.
+
+2. **SPANER -PLANE STRESS.inp**: This file models a planar structure (spaner) using plane stress elements. It defines material properties, creates geometry, applies boundary conditions, and sets up a static analysis.
+
+3. **Solid Steel plate.inp**: This file creates a solid steel plate model, applies material properties, defines geometry, and sets up a static analysis with boundary conditions and loads.
+
+4. **power transmission tower Geometry.inp**: This file defines a 3D geometry for a power transmission tower using link elements. It sets material properties, defines nodes, and creates elements to represent the structure.
+
+5. **PLATE -PLANE STRESS.inp**: This file models a plate under plane stress conditions, defines material properties, creates geometry, applies boundary conditions, and sets up a static analysis.
+
+6. **HARMONIC ANALYSIS.inp**: This file sets up a harmonic analysis for a beam structure, defining material properties, applying loads, and solving for dynamic response.
+
+7. **CORNER ANGLE BRACKET.inp**: This file creates a corner angle bracket model, defines material properties, creates geometry, and sets up a static analysis with loads.
+
+8. **Building concrete.inp**: This file models a concrete building structure, defining beams and shells, applying material properties, and setting up a static analysis with gravity loads.
+
+9. **3D SOLID OBJECT.inp**: This file creates a complex 3D solid object, defines material properties, creates geometry, and sets up a static analysis with boundary conditions and loads.
+
+10. **2D- TRUSS ANALYSIS.inp**: This file models a 2D truss structure, defines material properties, creates nodes and elements, applies boundary conditions, and sets up a static analysis.
+
+11. **2D HEAT CONDUCTION.inp**: This file sets up a 2D heat conduction analysis, defining material properties, creating geometry, applying temperature boundary conditions, and solving for temperature distribution.
+
+If you have specific questions about any of these files or need assistance with a particular aspect of the analyses, feel free to ask!
