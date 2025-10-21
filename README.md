@@ -4,7 +4,6 @@ This repository contains a set of ANSYS MAPDL input files (APDL .inp) for practi
 
 Repository files
 - Problems:
-  - [`Problems/references.md`](Problems/references.md)
   - [`Problems/Practice problems.pdf`](Problems/Practice problems.pdf)
 - Scripts (APDL input files):
   - [`scripts/2D HEAT CONDUCTION.inp`](scripts/2D HEAT CONDUCTION.inp) — 2D heat conduction example
@@ -68,4 +67,5 @@ License
 - This repository adds an MIT license in [`LICENSE`](LICENSE).
 
 Contributing
+
 - See [`CONTRIBUTING.md`](CONTRIBUTING.md) for contribution guidelines.
