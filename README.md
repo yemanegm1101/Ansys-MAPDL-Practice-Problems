@@ -35,8 +35,8 @@ Quick APDL run examples
  <img width="584" height="438" alt="image6" src="https://github.com/user-attachments/assets/15853087-944f-4c2b-8162-bc84194d7ed6" />
 
   - 3D SOLID OBJECT:
-   - ansys -b -i "scripts/3D SOLID OBJECT.txt" -o "results/3D_SOLID_OBJECT.out"
-   <img width="584" height="438" alt="image9" src="https://github.com/user-attachments/assets/40fe15b2-5b15-42e6-bcdb-c659265a4295" />
+     - ansys -b -i "scripts/3D SOLID OBJECT.txt" -o "results/3D_SOLID_OBJECT.out"
+  <img width="584" height="438" alt="image9" src="https://github.com/user-attachments/assets/40fe15b2-5b15-42e6-bcdb-c659265a4295" />
 
 - Building concrete:
   - ansys -b -i "scripts/Building concrete.txt" -o "results/Building_concrete.out"
@@ -83,4 +83,5 @@ Notes and troubleshooting
 Contributing
 
 - See [`CONTRIBUTING.md`](CONTRIBUTING.md) for contribution guidelines.
+
 
