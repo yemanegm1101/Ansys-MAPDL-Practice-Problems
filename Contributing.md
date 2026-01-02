@@ -15,7 +15,7 @@ Running and testing:
 
 Reporting issues:
 - Open an issue with:
-  - Problem input file path (e.g., `scripts/Steel Bracket.inp`)
+  - Problem input file path
   - ANSYS/MAPDL version
   - Short reproduction steps and expected vs actual behavior
 
