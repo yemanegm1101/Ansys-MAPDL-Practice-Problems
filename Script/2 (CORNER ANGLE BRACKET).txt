@@ -1,0 +1,91 @@
+/NOPR   ! Suppress printing of UNDO process 
+/PMACRO ! Echo following commands to log    
+FINISH  ! Make sure we are at BEGIN level   
+/CLEAR,NOSTART  ! Clear model since no SAVE found   
+! WE SUGGEST YOU REMOVE THIS LINE AND THE FOLLOWING STARTUP LINES   
+/NOPR   
+KEYW,PR_SET,1   
+KEYW,PR_STRUC,1  
+/PREP7  
+ET,1,PLANE182      
+KEYOPT,1,1,0
+KEYOPT,1,3,3
+KEYOPT,1,6,0  
+R,1,0.5,    
+MPTEMP,1,0  
+MPDATA,EX,1,,30e6   
+MPDATA,PRXY,1,,0.27 
+ 
+ BLC4,1,3,6,2  ! rectungle corner defined
+BLC4,5,1,2,4
+FLST,2,2,5,ORDE,2   
+FITEM,2,1   
+FITEM,2,-2  
+AADD,P51X   ! the two areas of the rectangles added
+CYL4,1,4,1   ! circle coordinate defined
+CYL4,6,1,1  
+FLST,2,2,5,ORDE,2   
+FITEM,2,1   
+FITEM,2,3   
+AADD,P51X   ! all areas of the sections added
+FLST,2,2,5,ORDE,2   
+FITEM,2,2   
+FITEM,2,4   
+AADD,P51X   
+CYL4,1,4,0.4 ! small hole circles defined
+CYL4,6,1,0.4
+FLST,3,2,5,ORDE,2   
+FITEM,3,2   
+FITEM,3,-3  
+ASBA,       1,P51X  ! those small holes subtracted
+LFILLT,18,4,0.4,0,    
+FLST,2,3,4  
+FITEM,2,20  
+FITEM,2,21  
+FITEM,2,19  
+AL,P51X 
+FLST,2,2,5,ORDE,2   
+FITEM,2,1   
+FITEM,2,4   
+AADD,P51X  
+SMRT,6  
+SMRT,5  
+SMRT,4  
+MSHAPE,0,2D 
+MSHKEY,0 
+CM,_Y,AREA  
+ASEL, , , ,       2 
+CM,_Y1,AREA 
+CHKMSH,'AREA'   
+CMSEL,S,_Y    
+AMESH,_Y1    
+CMDELE,_Y   
+CMDELE,_Y1  
+CMDELE,_Y2    
+/SOL
+FLST,2,4,4,ORDE,3   
+FITEM,2,5   
+FITEM,2,7   
+FITEM,2,-9  
+DL,P51X, ,ALL,  
+FLST,2,2,4,ORDE,2   
+FITEM,2,13  
+FITEM,2,-14 
+SFL,P51X,PRES,50,500
+FLST,2,2,4,ORDE,2   
+FITEM,2,13  
+FITEM,2,-14  
+SFL,P51X,PRES,500,50
+SOLVE   ! solve the resulting system of equations
+FINISH  ! finish solution
+/POST1  ! general post processor phase
+PLDISP,1  ! Plot Deformed + undeformed shape
+PLESOL, S,EQV, 0,1.0  ! plot the vonmis stress of the element
+/VIEW,1,1,2,3  ! display the thickness of the element 
+/ANG,1  ! 3D view of the element
+/SHRINK,0   
+/ESHAPE,1.0 
+/EFACET,1   
+/RATIO,1,1,1
+/CFORMAT,32,0   
+/REPLO
